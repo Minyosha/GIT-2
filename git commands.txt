@@ -1,0 +1,32 @@
+Создаем репозиторий на гитхабе, клонируем командой:
+git clone https://github.com/Minyosha/GIT-practice.git
+смотрим ссылки:
+git remote -v
+убираем связь:
+git remote remove origin
+связываем:
+git remote add origin https://github.com/Minyosha/GIT-2.git
+проверка в какой ветке:
+git branch
+пушим:
+git push -u origin main
+добавляем ссылку на источник (1 репозиторий):
+git remote add source https://github.com/Minyosha/GIT-practice.git
+вносим изменения в файл и добавляем его для коммита:
+git add .\README.md
+коммитим:
+git commit -m "Add line"
+пушим:
+git push -u origin main
+git push -u source main
+скачиваем изменения с репозиториев:
+git fetch --all
+смотрим изменения:
+git log origin/main ^main
+мерджим:
+git merge origin/main
+git merge source/main
+конфликтов не было, тк менялись разные файлы
+пушим:
+git push -u origin main
+git push -u source main
